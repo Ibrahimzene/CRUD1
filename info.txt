@@ -8,4 +8,3 @@ npm i -D nodemon: dateien überwachen
 npm i dayjs : date zu stellen 
 npm i -D @types/express 
 npm un -D npm-run-all
-
