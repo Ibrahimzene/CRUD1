@@ -1,0 +1,11 @@
+NPM instlationen
+npm run dev
+npm i -D tsx
+npm run api
+npm i -D concurrently
+npm i -D express
+npm i -D nodemon
+npm un dayjs
+npm i -D @types/express
+npm un -D npm-run-all
+
