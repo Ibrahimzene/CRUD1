@@ -17,10 +17,12 @@ export const getOneFlashcard = (suuid: string) => {
 	}
 }
 
-export const addFlashcard = (newFlashcard: INewFlashcard) => {
+export const addFlashcard = async (newFlashcard: INewFlashcard) => {
 	const flashcard:IFlashcard = {
 		suuid: getSuuid(),
 		...newFlashcard,
 	}
-	console.log(flashcard);
+	db.data.flashcards.push(flashcard);
+	await db.write();
+	return flashcard;
 }
