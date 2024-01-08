@@ -35,4 +35,4 @@ flashcardRouter.patch('/:suuid', (req, res) => {
 flashcardRouter.delete('/:suuid', (req, res) => {
 	const suuid = req.params.suuid;
 	res.json(`delete flashcard with suuid ${suuid}`);
-});
+})
