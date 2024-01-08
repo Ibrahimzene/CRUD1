@@ -4,7 +4,9 @@ import { getDb } from './dbtools';
 const db = await getDb();
 
 export const getAllFlashcards = () => {
-	return db.data.flashcards;
+	if (db) {
+		return db.data.flashcards;
+	}
 }
 
 export const getOneFlashcard = (suuid: string) => {

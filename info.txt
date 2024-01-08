@@ -1,4 +1,6 @@
-NPM instlationen
+How to like: https://tanguay-eu.vercel.app/howtos/804
+
+## NPM instlationen
 npm run dev : start
 npm i -D tsx : ts haben
 npm run api : start api
@@ -8,3 +10,4 @@ npm i -D nodemon: dateien überwachen
 npm i dayjs : date zu stellen 
 npm i -D @types/express 
 npm un -D npm-run-all
+npm install lowdb
