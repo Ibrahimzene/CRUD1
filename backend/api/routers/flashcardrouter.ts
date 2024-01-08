@@ -25,6 +25,7 @@ flashcardRouter.patch('/:suuid', (req, res) => {
 	res.json(`replace some fields on flashcard with suuid ${suuid}`);
 });
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 flashcardRouter.delete('/:suuid', (req, res) => {
 	
 })
