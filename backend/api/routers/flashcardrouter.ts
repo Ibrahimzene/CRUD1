@@ -18,8 +18,10 @@ flashcardRouter.get('/:suuid', (req, res) => {
 	}
 });
 
-flashcardRouter.post('/', (_req, res) => {
-	res.json('create flashcard');
+flashcardRouter.post('/', (req, res) => {
+	const newFlashcard = req.body;
+	console.log('body', newFlashcard);
+	res.json('testing...');
 });
 
 flashcardRouter.put('/:suuid', (req, res) => {
@@ -35,4 +37,4 @@ flashcardRouter.patch('/:suuid', (req, res) => {
 flashcardRouter.delete('/:suuid', (req, res) => {
 	const suuid = req.params.suuid;
 	res.json(`delete flashcard with suuid ${suuid}`);
-})
+});
