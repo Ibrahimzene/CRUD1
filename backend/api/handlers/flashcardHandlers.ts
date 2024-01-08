@@ -1,12 +1,9 @@
-import { IFlashcard } from '../../interfaces';
 import { getDb } from './dbtools';
 
 const db = await getDb();
 
 export const getAllFlashcards = () => {
-	if (db) {
-		return db.data.flashcards;
-	}
+	return db.data.flashcards;
 }
 
 export const getOneFlashcard = (suuid: string) => {

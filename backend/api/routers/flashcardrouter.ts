@@ -1,14 +1,21 @@
 import { Router } from 'express';
+import * as flashcardHandlers from '../handlers/flashcardHandlers';
 
 export const flashcardRouter = Router();
 
 flashcardRouter.get('/', (_req, res) => {
-	res.json('get all flashcards');
+	const flashcards = flashcardHandlers.getAllFlashcards();
+	res.json(flashcards);
 });
 
 flashcardRouter.get('/:suuid', (req, res) => {
 	const suuid = req.params.suuid;
-	res.json(`get one flashcard with suuid ${suuid}`);
+	const flashcard = flashcardHandlers.getOneFlashcard(suuid);
+	if (flashcard) {
+		res.json(flashcard);
+	} else {
+		res.status(404).json(`Flashcard with suuid "${suuid}" not found.`)
+	}
 });
 
 flashcardRouter.post('/', (_req, res) => {
@@ -25,7 +32,7 @@ flashcardRouter.patch('/:suuid', (req, res) => {
 	res.json(`replace some fields on flashcard with suuid ${suuid}`);
 });
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 flashcardRouter.delete('/:suuid', (req, res) => {
-	
-})
+	const suuid = req.params.suuid;
+	res.json(`delete flashcard with suuid ${suuid}`);
+});
