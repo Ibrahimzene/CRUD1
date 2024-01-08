@@ -29,8 +29,7 @@ flashcardRouter.put('/:suuid', (req, res) => {
 	res.json(`replace all fields flashcard with suuid ${suuid}`);
 });
 
-flashcardRouter.patch('/:suuid', (req, res) => {
-	const suuid = req.params.suuid;
+flashcardRouter.patch('/:suuid', (req, res) => {../.
 	res.json(`replace some fields on flashcard with suuid ${suuid}`);
 });
 
