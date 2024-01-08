@@ -1,3 +1,4 @@
+import { IFlashcard } from '../../interfaces';
 import { getDb } from './dbtools';
 
 const db = await getDb();
@@ -7,5 +8,11 @@ export const getAllFlashcards = () => {
 }
 
 export const getOneFlashcard = (suuid: string) => {
+	const flashcard = db.data.flashcards.find(m => m.suuid === suuid);
 
+	if (flashcard) {
+		return flashcard;
+	} else {
+		return null;
+	}
 }
