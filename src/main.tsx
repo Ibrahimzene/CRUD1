@@ -6,6 +6,7 @@ import { PageWelcome } from "./pages/PageWelcome.tsx";
 import { PageInfo } from "./pages/PageInfo.tsx";
 import { PageAbout } from "./pages/PageAbout.tsx";
 import { Page404 } from "./pages/Page404.tsx";
+import { PageNpm } from "./pages/Pagenpm.tsx";
 
 const router = createBrowserRouter([
 	{
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
 			{
 				path: "info",
 				element: <PageInfo />,
+			},
+			{
+				path: "npm",
+				element: <PageNpm />,
 			},
 			{
 				path: "about",
